@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep (Bicep PowerShell 2.1.0)",
       "version": "0.4.1008.15138",
-      "templateHash": "15568678928146416088"
+      "templateHash": "10665293898061069201"
     }
   },
   "parameters": {
@@ -110,8 +110,7 @@
       "defaultValue": "localadmin"
     },
     "adminPassword": {
-      "type": "secureString",
-      "defaultValue": "Welcome2022*"
+      "type": "secureString"
     },
     "jumpboxLinuxVmSize": {
       "type": "string",
@@ -132,7 +131,6 @@
     },
     "batchServiceObjectId": {
       "type": "string",
-      "defaultValue": "f520d84c-3fd3-4cc8-88d4-2ed25b00d27a",
       "metadata": {
         "description": "Get the Batch Service Object Id: az ad sp show --id \"MicrosoftAzureBatch\" --query objectId -o tsv"
       }
