@@ -1,0 +1,82 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceGroupLocation": {
+      "value": "westeurope"
+    },
+    "environment": {
+      "value": "dev"
+    },
+    "deployHubSpoke": {
+      "value": true
+    },
+    "deployJumpBoxVMs": {
+      "value": true
+    },
+    "deployJumpboxWindowsAddOns": {
+      "value": true
+    },
+    "vmExtensionWindowsJumpboxUri": {
+      "value": "https://raw.githubusercontent.com/mocelj/AzureBatch-Secured/main/artefacts/VM-Extensions-Windows/azure-batch-secured-jumpbox-setup.ps1"
+    },
+    "ignoreDnsZoneNwLinks": {
+      "value": false
+    },
+    "deployVPNGw": {
+      "value": false
+    },
+    "deploySecureBatch": {
+      "value": false
+    },
+    "deployNxOneView": {
+      "value": true
+    },
+    "utcShort": {
+      "value": "[utcNow('d')]"
+    },
+    "resourceTags": {
+      "value": {
+        "WorkloadName": "Back Office Risk",
+        "BusinessUnit": "Risk Managment",
+        "Owner": "Darko Mocelj",
+        "Environment": "[parameters('environment')]",
+        "CostCenter": "Internal",
+        "LastDeployed": "[parameters('utcShort')]"
+      }
+    },
+    "adminUserName": {
+      "value": "localadmin"
+    },
+    "jumpboxLinuxVmSize": {
+      "value": "Standard_B1s"
+    },
+    "jumpboxWindowsVmSize": {
+      "value": "Standard_D4_v5"
+    },
+    "batchServiceObjectId": {
+      "value": ""
+    },
+    "assignBatchServiceRoles": {
+      "value": false
+    },
+    "batchNodeSku": {
+      "value": "Standard_D2s_V3"
+    },
+    "acrPublicNetworkAccess": {
+      "value": "Disabled"
+    },
+    "acrSku": {
+      "value": "Premium"
+    },
+    "acrAdminUserEnabled": {
+      "value": true
+    },
+    "deployPrivateACR": {
+      "value": true
+    },
+    "primaryScriptBuildKvTestImage": {
+      "value": "https://raw.githubusercontent.com/mocelj/AzureBatch-Secured/main/artefacts/checkAkv/buildRemoteContainer.sh"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+--- To-Do --- 
+
+1) Delete Azure Batch Demo
+2) Delete Spoke01
+3) Mount Nx File Shares to Jumpbox
+4) Add Head and Calculation Nodes
+5) Add Region Parameter, Throughput Parameter for Cosmos DB
+6) If needed, add custom deployment script to populate DB schema
+
